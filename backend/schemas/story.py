@@ -26,7 +26,7 @@ class StoryBase(BaseModel):
     class Config:
         from_attributes = True
 
-class CreateStoryResponse(BaseModel):
+class CreateStoryRequest(BaseModel):
     theme: str
 
 class CompleteStoryResponse(StoryBase):
