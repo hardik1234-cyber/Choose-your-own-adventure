@@ -8,6 +8,7 @@ from models.story import Story, StoryNode
 from models.job import StoryJob
 from schemas.story import CompleteStoryResponse,CompleteStoryNodeResponse,CreateStoryRequest
 from schemas.job import StoryJobResponse
+from core.story_generator import StoryGenerator
 
 router = APIRouter(
     prefix="/story",
@@ -56,7 +57,7 @@ def generate_story_task(job_id: str,theme: str, session_id: str):
             job.status = "processing"
             db.commit() 
 
-            story = {} # Todo: Implement story generation logic
+            story = StoryGenerator.generate_story(db,session_id,theme)
 
             job.story_id = 1
             job.status = "completed"
@@ -87,4 +88,4 @@ def complete_story(
     return complete_story  
 
 def build_complete_story_tree(db: Session, story: Story):
-    pass
+    pass    
