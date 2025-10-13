@@ -11,7 +11,7 @@ class Settings(BaseSettings):
 
     ALLOWED_ORIGINS: str = ""
 
-    OPENAI_API_KEY: str = ""
+    GEMINI_API_KEY: str = ""
 
 
     @field_validator("ALLOWED_ORIGINS")
