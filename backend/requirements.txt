@@ -1,10 +1,8 @@
 fastapi[all],
-google-generativeai,
-langchain,
-langchain-google-genai,
-langchain-mistralai,
-langchain-openai,
-psycopg2-binary,
-python-dotenv,
-sqlalchemy,
+google-generativeai
+langchain
+langchain-google-genai
+psycopg2-binary
+python-dotenv
+sqlalchemy
 uvicorn
