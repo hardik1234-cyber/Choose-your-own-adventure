@@ -88,7 +88,6 @@ An interactive AI-powered story generator that creates personalized choose-your-
    Create a `.env` file in the backend directory:
    ```env
    DATABASE_URL=sqlite:///./database.db
-   API_PREFIX=/api
    DEBUG=True
    ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
    GEMINI_API_KEY=your_gemini_api_key_here
@@ -135,9 +134,9 @@ When the backend is running, visit:
 
 ### Key Endpoints
 
-- `POST /api/stories/create` - Create a new story generation job
-- `GET /api/jobs/{job_id}` - Check job status
-- `GET /api/stories/{story_id}/complete` - Get complete story data
+- `POST stories/create` - Create a new story generation job
+- `GET  jobs/{job_id}` - Check job status
+- `GET stories/{story_id}/complete` - Get complete story data
 
 ## 🗄️ Database Schema
 
