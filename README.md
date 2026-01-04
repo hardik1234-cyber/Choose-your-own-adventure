@@ -1,6 +1,6 @@
 # Choose Your Own Adventure Game
 
-An interactive AI-powered story generator that creates personalized choose-your-own-adventure experiences. Users can input a theme, and the system generates a complete branching narrative with multiple paths and endings using Google's Gemini AI.
+An interactive Gen-AI-powered story generator that creates personalized choose-your-own-adventure experiences. Users can input a theme, and the system generates a complete branching narrative with multiple paths and endings using Google's Gemini AI.
 
 ## 🚀 Features
 
