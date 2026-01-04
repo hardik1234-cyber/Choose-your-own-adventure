@@ -64,58 +64,6 @@ An interactive Gen-AI-powered story generator that creates personalized choose-y
 - Node.js 16 or higher
 - Google Gemini API key
 
-## 🚀 Installation & Setup
-
-### Backend Setup
-
-1. **Navigate to backend directory:**
-   ```bash
-   cd backend
-   ```
-
-2. **Create virtual environment:**
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure environment variables:**
-   Create a `.env` file in the backend directory:
-   ```env
-   DATABASE_URL=sqlite:///./database.db
-   DEBUG=True
-   ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-
-5. **Run the backend:**
-   ```bash
-   python main.py
-   ```
-   The API will be available at `http://127.0.0.1:8000`
-
-### Frontend Setup
-
-1. **Navigate to frontend directory:**
-   ```bash
-   cd frontend
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-   The frontend will be available at `http://localhost:5173`
 
 ## 🎮 Usage
 
@@ -172,6 +120,61 @@ The system uses a sophisticated prompt engineering approach:
 3. **Multiple Endings**: Guaranteed winning and losing paths
 4. **Dynamic Depth**: Stories vary in length and complexity
 5. **Theme Integration**: User themes are incorporated into narrative generation
+
+
+## 🚀 Installation & Setup
+
+### Backend Setup
+
+1. **Navigate to backend directory:**
+   ```bash
+   cd backend
+   ```
+
+2. **Create virtual environment:**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure environment variables:**
+   Create a `.env` file in the backend directory:
+   ```env
+   DATABASE_URL=sqlite:///./database.db
+   DEBUG=True
+   ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+
+5. **Run the backend:**
+   ```bash
+   python main.py
+   ```
+   The API will be available at `http://127.0.0.1:8000`
+
+### Frontend Setup
+
+1. **Navigate to frontend directory:**
+   ```bash
+   cd frontend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   The frontend will be available at `http://localhost:5173`
+
 
 ## 🔧 Development
 
