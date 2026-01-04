@@ -1,6 +1,6 @@
 # Choose Your Own Adventure Game
 
-An interactive AI-powered story generator that creates personalized choose-your-own-adventure experiences. Users can input a theme, and the system generates a complete branching narrative with multiple paths and endings using Google's Gemini AI.
+An interactive Gen-AI-powered story generator that creates personalized choose-your-own-adventure experiences. Users can input a theme, and the system generates a complete branching narrative with multiple paths and endings using Google's Gemini AI.
 
 ## 🚀 Features
 
@@ -36,6 +36,57 @@ An interactive AI-powered story generator that creates personalized choose-your-
 6. Frontend polls job status and redirects to interactive story player
 7. User makes choices that navigate through the story tree
 
+## 🤖 AI Story Generation
+
+The system uses a sophisticated prompt engineering approach:
+
+1. **Structured Output**: Pydantic models ensure consistent JSON responses from AI
+2. **Tree Structure**: Stories are generated as hierarchical node trees
+3. **Multiple Endings**: Guaranteed winning and losing paths
+4. **Dynamic Depth**: Stories vary in length and complexity
+5. **Theme Integration**: User themes are incorporated into narrative generation
+
+## 🎮 Usage
+
+1. **Access the application** at `http://localhost:5173`
+2. **Enter a story theme** (e.g., "space adventure", "medieval fantasy", "detective mystery")
+3. **Wait for AI generation** - the system will show loading status
+4. **Play the story** - make choices by clicking on options
+5. **Experience multiple endings** - different paths lead to different outcomes
+6. **Restart or create new stories** anytime
+
+## 📚 API Documentation
+
+### Key Endpoints
+
+- `POST stories/create` - Create a new story generation job
+- `GET  jobs/{job_id}` - Check job status
+- `GET stories/{story_id}/complete` - Get complete story data
+
+## 🗄️ Database Schema
+
+### Stories Table
+- `id`: Primary key
+- `title`: Story title
+- `session_id`: User session identifier
+- `created_at`: Timestamp
+
+### Story Nodes Table
+- `id`: Primary key
+- `story_id`: Foreign key to stories
+- `content`: Node content text
+- `is_root`: Boolean for root node
+- `is_ending`: Boolean for ending nodes
+- `is_winning_ending`: Boolean for winning endings
+- `options`: JSON array of choice options
+
+### Jobs Table
+- `job_id`: UUID primary key
+- `session_id`: User session
+- `theme`: Story theme
+- `status`: Job status (pending/processing/completed/failed)
+- `story_id`: Generated story ID
+- `error`: Error message if failed
 ## 🛠️ Tech Stack
 
 ### Backend
@@ -117,61 +168,6 @@ An interactive AI-powered story generator that creates personalized choose-your-
    ```
    The frontend will be available at `http://localhost:5173`
 
-## 🎮 Usage
-
-1. **Access the application** at `http://localhost:5173`
-2. **Enter a story theme** (e.g., "space adventure", "medieval fantasy", "detective mystery")
-3. **Wait for AI generation** - the system will show loading status
-4. **Play the story** - make choices by clicking on options
-5. **Experience multiple endings** - different paths lead to different outcomes
-6. **Restart or create new stories** anytime
-
-## 📚 API Documentation
-
-When the backend is running, visit:
-- **Swagger UI**: `http://127.0.0.1:8000/docs`
-- **ReDoc**: `http://127.0.0.1:8000/redoc`
-
-### Key Endpoints
-
-- `POST stories/create` - Create a new story generation job
-- `GET  jobs/{job_id}` - Check job status
-- `GET stories/{story_id}/complete` - Get complete story data
-
-## 🗄️ Database Schema
-
-### Stories Table
-- `id`: Primary key
-- `title`: Story title
-- `session_id`: User session identifier
-- `created_at`: Timestamp
-
-### Story Nodes Table
-- `id`: Primary key
-- `story_id`: Foreign key to stories
-- `content`: Node content text
-- `is_root`: Boolean for root node
-- `is_ending`: Boolean for ending nodes
-- `is_winning_ending`: Boolean for winning endings
-- `options`: JSON array of choice options
-
-### Jobs Table
-- `job_id`: UUID primary key
-- `session_id`: User session
-- `theme`: Story theme
-- `status`: Job status (pending/processing/completed/failed)
-- `story_id`: Generated story ID
-- `error`: Error message if failed
-
-## 🤖 AI Story Generation
-
-The system uses a sophisticated prompt engineering approach:
-
-1. **Structured Output**: Pydantic models ensure consistent JSON responses from AI
-2. **Tree Structure**: Stories are generated as hierarchical node trees
-3. **Multiple Endings**: Guaranteed winning and losing paths
-4. **Dynamic Depth**: Stories vary in length and complexity
-5. **Theme Integration**: User themes are incorporated into narrative generation
 
 ## 🔧 Development
 
