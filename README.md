@@ -36,34 +36,15 @@ An interactive Gen-AI-powered story generator that creates personalized choose-y
 6. Frontend polls job status and redirects to interactive story player
 7. User makes choices that navigate through the story tree
 
-## 🛠️ Tech Stack
+## 🤖 AI Story Generation
 
-### Backend
-- **Python 3.8+**
-- **FastAPI** - Modern async web framework
-- **SQLAlchemy** - Database ORM
-- **LangChain** - AI framework integration
-- **Google Generative AI** - Gemini model access
-- **Pydantic** - Data validation
-- **Uvicorn** - ASGI server
+The system uses a sophisticated prompt engineering approach:
 
-### Frontend
-- **React 19** - UI framework
-- **Vite** - Build tool and dev server
-- **React Router** - Client-side routing
-- **Axios** - HTTP client
-- **ESLint** - Code linting
-
-### Database
-- **SQLite** - Lightweight relational database
-- **SQLAlchemy** - ORM and migrations
-
-## 📋 Prerequisites
-
-- Python 3.8 or higher
-- Node.js 16 or higher
-- Google Gemini API key
-
+1. **Structured Output**: Pydantic models ensure consistent JSON responses from AI
+2. **Tree Structure**: Stories are generated as hierarchical node trees
+3. **Multiple Endings**: Guaranteed winning and losing paths
+4. **Dynamic Depth**: Stories vary in length and complexity
+5. **Theme Integration**: User themes are incorporated into narrative generation
 
 ## 🎮 Usage
 
@@ -75,10 +56,6 @@ An interactive Gen-AI-powered story generator that creates personalized choose-y
 6. **Restart or create new stories** anytime
 
 ## 📚 API Documentation
-
-When the backend is running, visit:
-- **Swagger UI**: `http://127.0.0.1:8000/docs`
-- **ReDoc**: `http://127.0.0.1:8000/redoc`
 
 ### Key Endpoints
 
@@ -110,17 +87,33 @@ When the backend is running, visit:
 - `status`: Job status (pending/processing/completed/failed)
 - `story_id`: Generated story ID
 - `error`: Error message if failed
+## 🛠️ Tech Stack
 
-## 🤖 AI Story Generation
+### Backend
+- **Python 3.8+**
+- **FastAPI** - Modern async web framework
+- **SQLAlchemy** - Database ORM
+- **LangChain** - AI framework integration
+- **Google Generative AI** - Gemini model access
+- **Pydantic** - Data validation
+- **Uvicorn** - ASGI server
 
-The system uses a sophisticated prompt engineering approach:
+### Frontend
+- **React 19** - UI framework
+- **Vite** - Build tool and dev server
+- **React Router** - Client-side routing
+- **Axios** - HTTP client
+- **ESLint** - Code linting
 
-1. **Structured Output**: Pydantic models ensure consistent JSON responses from AI
-2. **Tree Structure**: Stories are generated as hierarchical node trees
-3. **Multiple Endings**: Guaranteed winning and losing paths
-4. **Dynamic Depth**: Stories vary in length and complexity
-5. **Theme Integration**: User themes are incorporated into narrative generation
+### Database
+- **SQLite** - Lightweight relational database
+- **SQLAlchemy** - ORM and migrations
 
+## 📋 Prerequisites
+
+- Python 3.8 or higher
+- Node.js 16 or higher
+- Google Gemini API key
 
 ## 🚀 Installation & Setup
 
