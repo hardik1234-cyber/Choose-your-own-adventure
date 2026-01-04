@@ -18,15 +18,15 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins= settings.ALLOWED_ORIGINS,
+    allow_origins= ["https://choose-your-own-adventure-frontend.onrender.com/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-app.include_router(story.router, prefix=settings.API_PREFIX)
-app.include_router(job.router, prefix=settings.API_PREFIX)
+app.include_router(story.router)
+app.include_router(job.router)
 
 
 if __name__ == "__main__":
