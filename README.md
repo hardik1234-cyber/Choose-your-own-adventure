@@ -1,3 +1,13 @@
+⚠️ NOTE :
+
+While running this full stack app please open both the links , as we have deployed this app in a containerized way on render as 2 webapps.
+One for backend and one for frontend.
+Render takes some time to load (~ 15sec) in total for both webapp.
+
+Frontend webapp link : https://choose-your-own-adventure-frontend.onrender.com
+
+Backend webapp link : https://choose-your-own-adventure-backend-zs2f.onrender.com
+
 # Choose Your Own Adventure Game
 
 An interactive Gen-AI-powered story generator that creates personalized choose-your-own-adventure experiences. Users can input a theme, and the system generates a complete branching narrative with multiple paths and endings using Google's Gemini AI.
